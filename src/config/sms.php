@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'driver' => env('SMS_DRIVER', 'messagebird'),
+    'driver' => env('SMS_DRIVER', 'twilio'),
 
     'messagebird' => [
         'api_key' => env('MESSAGEBIRD_API_KEY'),

@@ -23,9 +23,13 @@
   },
   "extra": {
     "laravel": {
+
       "providers": [
         "MarmaNik\\Sms\\SmsServiceProvider"
-      ]
+      ],
+      "aliases":{
+        "Analytics": "MarmaNik\\Sms\\Facades\\Sms"
+      }
     }
   }
 }
