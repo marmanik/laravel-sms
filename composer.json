@@ -1,6 +1,13 @@
 {
   "name": "marmanik/laravel-sms",
   "description": "SMS Wrapper for Laravel using Nexmo, MessageBird, Twilio",
+  "keywords": [
+    "laravel",
+    "sms",
+    "twilio",
+    "messagebird",
+    "nexmo"
+  ],
   "license": "MIT",
   "authors": [
     {
@@ -22,13 +29,13 @@
   },
   "extra": {
     "laravel": {
-
       "providers": [
         "MarmaNik\\Sms\\SmsServiceProvider"
       ],
-      "aliases":{
+      "aliases": {
         "Analytics": "MarmaNik\\Sms\\Facades\\Sms"
       }
     }
-  }
+  },
+  "minimum-stability": "dev"
 }
