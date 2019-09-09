@@ -19,9 +19,20 @@ class SmsServiceProvider extends ServiceProvider
             return new SmsManager($app);
         });
 
+        $this->registerPublishes();
+
     }
     protected function configPath()
     {
         return __DIR__ . '/config/sms.php';
+    }
+
+    protected function registerPublishes()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/config/sms.php' => config_path('sms.php'),
+            ], 'sms-config');
+        }
     }
 }
