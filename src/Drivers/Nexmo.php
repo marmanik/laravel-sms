@@ -34,6 +34,7 @@ class Nexmo implements Driver
 
         $response = $message->getResponseData();
 
+        return $response;
     }
 
     public function getDriver(): string

@@ -13,7 +13,6 @@ use Twilio\Rest\Client as TwilioClient;
  */
 class Twilio implements Driver
 {
-
     protected $client;
     protected $from;
 
@@ -30,15 +29,13 @@ class Twilio implements Driver
 
     public function send(string $msisdn, string $msg)
     {
-
-        $this->client->messages->create(
+        return  $this->client->messages->create(
             $msisdn,
             [
                 'from' => $this->from,
                 'body' => $msg,
             ]
         );
-
     }
 
 
