@@ -3,14 +3,12 @@
 
 namespace MarmaNik\Sms\Drivers;
 
-
 use MarmaNik\Sms\Contracts\Driver;
 use Nexmo\Client as NexmoClient;
 use Nexmo\Client\Credentials\Basic as NexmoCredentialsBasic;
 
 class Nexmo implements Driver
 {
-
     protected $client;
     protected $from;
 
@@ -25,8 +23,7 @@ class Nexmo implements Driver
 
     public function send(string $msisdn, string $msg)
     {
-
-       $message = $this->client->message()->send([
+        $message = $this->client->message()->send([
             'to' => $msisdn,
             'from' => $this->from,
             'text' => $msg

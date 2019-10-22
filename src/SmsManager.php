@@ -11,19 +11,17 @@ use Illuminate\Support\Manager;
 
 class SmsManager extends Manager
 {
-
     protected function createTwilioDriver()
     {
         $driver = new Twilio($this->app['config']['sms.twilio']);
 
         return $this->buildSmsClient($driver);
-
     }
 
     protected function createMessageBirdDriver()
     {
         $driver = new MessageBird($this->app['config']['sms.messagebird']);
-
+ 
         return $this->buildSmsClient($driver);
     }
 
