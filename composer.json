@@ -17,7 +17,7 @@
   ],
   "require": {
     "php": ">=7",
-    "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x|5.9.x|6.x",
+    "illuminate/support": "^5.5|^6.0",
     "messagebird/php-rest-api": "^1.15",
     "nexmo/client": "^1.8",
     "twilio/sdk": "^5.34"

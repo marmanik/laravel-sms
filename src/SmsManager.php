@@ -21,7 +21,7 @@ class SmsManager extends Manager
     protected function createMessageBirdDriver()
     {
         $driver = new MessageBird($this->app['config']['sms.messagebird']);
- 
+
         return $this->buildSmsClient($driver);
     }
 
