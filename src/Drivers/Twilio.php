@@ -22,7 +22,7 @@ class Twilio implements Driver
             $this->client = new TwilioClient($config['twilio_sid'], $config['twilio_token']);
             $this->from = $config['twilio_from'];
         } catch (ConfigurationException $e) {
-            Log::error($e);
+            throw $e;
         }
     }
 
